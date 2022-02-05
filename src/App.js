@@ -9,6 +9,11 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [listings, setListings] = useState([])
 
+  const removeListing = (id) => {
+    const newListings = listings.filter((listing) => listing.fields.id !== id);
+    setListings(newListings)
+  }
+
   const fetchListings = async () => {
     setLoading(true);
     try {
@@ -36,7 +41,7 @@ function App() {
   }
   return (
     <main>
-      <Listings listings={listings} />
+      <Listings listings={listings} removeListing={removeListing} />
     </main>
   )
 }

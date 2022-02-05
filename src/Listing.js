@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Tour = ({xl_picture_url, space, price, name, description}) => {
+const Tour = ({id, xl_picture_url, space, price, name, description, removeListing}) => {
   const [readMore, setReadMore] = useState(true)
   return (
     <article className='single-listing'>
@@ -19,7 +19,7 @@ const Tour = ({xl_picture_url, space, price, name, description}) => {
           </button>
         </p>
         {/* <button className='host-btn'>Contact Host</button> */}
-        <button className='delete-btn'>Not Interested</button>
+        <button className='delete-btn' onClick={() => removeListing(id)}>Not Interested</button>
       </footer>
       {/* {console.log(listing)} */}
     </article>

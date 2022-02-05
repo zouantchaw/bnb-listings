@@ -1,6 +1,6 @@
 import React from 'react';
 import Listing from './Listing';
-const Listings = ({listings}) => {
+const Listings = ({listings, removeListing}) => {
   return (
     <section>
       <div className="title">
@@ -9,7 +9,7 @@ const Listings = ({listings}) => {
       </div>
       <div>
         {listings.map((listing => {
-          return <Listing key={listing.recordid} {...listing.fields}/>
+          return <Listing key={listing.fields.id} {...listing.fields} removeListing={removeListing}/>
         }))}
       </div>
     </section>
