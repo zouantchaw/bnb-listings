@@ -39,6 +39,20 @@ function App() {
       </main>
     )
   }
+
+  if (listings.length === 0) {
+    return (
+      <main>
+        <div className="title">
+          <h2>no listings left</h2>
+          <button className='btn' onClick={()=> fetchListings()}>
+            refresh
+          </button>
+        </div>
+      </main>
+    )
+  }
+
   return (
     <main>
       <Listings listings={listings} removeListing={removeListing} />
