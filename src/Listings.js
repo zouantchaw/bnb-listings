@@ -1,7 +1,7 @@
 import React from 'react';
 import Listing from './Listing';
-const Tours = () => {
-  return <h2>tours component</h2>;
+const Listings = () => {
+  return <h2>Listings component</h2>;
 };
 
-export default Tours;
+export default Listings;
