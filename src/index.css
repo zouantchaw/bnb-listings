@@ -226,3 +226,16 @@ main {
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
 }
+
+/* .host-btn {
+  display: block;
+  width: 200px;
+  margin: 1rem auto 0 auto;
+  color: var(--clr-primary-5);
+  letter-spacing: var(--spacing);
+  background: transparent;
+  border: 20px solid black;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+  border: 1px solid blue;
+} */

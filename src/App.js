@@ -11,9 +11,16 @@ function App() {
 
   const fetchListings = async () => {
     setLoading(true);
-    const response = await fetch(bnbUrl);
-    const {records} =  await response.json()
-    console.log(records)
+    try {
+      const response = await fetch(bnbUrl);
+      const {records} =  await response.json()
+      setLoading(false)
+      setListings(records)
+    } catch (error) {
+      setLoading(false)
+      console.log(error)
+      
+    }
   }
 
   useEffect(() => {
@@ -29,7 +36,7 @@ function App() {
   }
   return (
     <main>
-      <Listings />
+      <Listings listings={listings} />
     </main>
   )
 }
